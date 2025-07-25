@@ -27,36 +27,52 @@ body {
   line-height: 1.6;
 }
 
-header {
+/* header {
   background-color: var(--primary-color);
   color: var(--accent2-color);
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+} */
+
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
 }
+
 
 header img {
   width: 80px;
   margin-bottom: 10px;
 }
 
-nav {
+/* nav {
   display: flex;
   gap: 20px;
   background-color: #fff;
   padding: 10px 20px;
   border-radius: 6px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
+}*/
 
 nav a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--accent1-color);
   font-weight: bold;
   padding: 6px 12px;
-  border: 2px solid transparent;
   border-radius: 4px;
+}  
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
 }
 
 header, main, footer {
@@ -121,50 +137,75 @@ nav, p, section, article {
 }
 
 /* History Section */
-.history {
+/* .history {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: justify;
+} */
+
+.history {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 20px;
 }
+
 
 /* Adventure Section */
 .adventure {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 20px;
   padding: 20px;
   text-align: center;
 }
 
+.adventure figure {
+  width: 140px; 
+  margin: 0;
+}
+
 .adventure img {
-  width: 120px;
+  width: 100%;
   height: auto;
-  margin: 10px;
   border-radius: 4px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
+
+.adventure figcaption {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--accent2-color); 
+  font-family: var(--body-font);
+}
+
 
 
 /* Footer */
 footer {
   background-color: var(--accent2-color);
-  text-align: center;
+  color: var(--accent1-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px 10px;
   margin-top: 30px;
-  color: var(--accent1-color);
 }
 
 footer p {
-  margin-bottom: 12px;
+  margin: 0;
 }
 
-/* Social Media Centered */
+/* Social Media Icons (Centered Version) */
 .socialmedia {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 16px;
   margin-top: 12px;
+  flex-grow: 1;
 }
 
 .socialmedia a {
@@ -174,4 +215,5 @@ footer p {
 .socialmedia a img {
   width: 30px;
 }
+
 
