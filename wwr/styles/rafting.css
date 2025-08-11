@@ -22,9 +22,14 @@
 
 body {
   font-family: var(--body-font);
-  color: var(--accent2-color); /* light text on dark background */
+  color: var(--accent2-color);
   background-color: var(--accent1-color); /* russian violet */
   line-height: 1.6;
+}
+
+body a {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 
 /* header {
@@ -175,12 +180,25 @@ nav, p, section, article {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
+.adventure #figure1,
+.adventure #figure2,
+.adventure #figure3,
+.adventure #figure4,
+.adventure #figure5 {
+  display: flex;
+  margin: 0 1rem;
+  width: 200px;
+  /* position: absolute; */
+  
+}
+
 .adventure figcaption {
   margin-top: 6px;
   font-size: 0.85rem;
   color: var(--accent2-color); 
   font-family: var(--body-font);
 }
+
 
 /* CONTACT PAGE STYLES */
 .contact-grid {
@@ -207,25 +225,8 @@ nav, p, section, article {
   min-height: 300px;
 }
 
-/* .contact-team {
-  text-align: center;
-}
-
-.contact-team .team {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-  margin-top: 1.5rem;
-}
-
-.contact-team .team figure {
-  width: 200px;
-  text-align: center;
-}
-
 form {
-  background-color: white;
+  /* background-color: white; */
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -233,18 +234,33 @@ form {
   margin: 2rem auto;
 }
 
-form h2 {
+form h2 p {
   margin-bottom: 1rem;
   text-align: center;
+  margin: 10px 10px 0 0;
 }
 
 form label,
-form input,
 form textarea,
 form fieldset {
   display: block;
   width: 100%;
   margin: 0.5rem 0;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form fieldset {
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
 }
 
 form input,
@@ -283,7 +299,7 @@ form input[type="checkbox"] {
 }
 
 form button {
-  background-color: var(--primary-color);
+  background-color: #a3171b;
   color: white;
   padding: 0.75rem 2rem;
   font-size: 1rem;
@@ -296,10 +312,6 @@ form button {
   margin-left: auto;
   margin-right: auto;
 }
-
-form button:hover {
-  background-color: #a3171b;
-} */
 
 .contact-bottom {
   display: grid;
@@ -316,9 +328,165 @@ form button:hover {
   padding: 0;
 }
 
+/* INDEX PAGE STYLES */
+.hero-index {
+  width: 100%;
+  height: 100vh; /* fills full screen height */
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-index img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.hero-index h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  background-color: var(--accent1-color);
+  color: #fff;
+  opacity: 0.7;
+  font-family: var(--heading-font);
+  font-size: 2rem;
+}
+
+section h2 p b {
+  margin-bottom: 1rem;
+  text-align: center;
+  /* margin: 10px 10px 0 0; */
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+section form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+section form input {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+section button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 8rem;
+} 
+
+.grid figure {
+  width: 340px; 
+  margin: 0;
+  gap: 1rem;
+} 
+
+.grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+.grid figcaption {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--accent2-color); 
+  font-family: var(--body-font);
+}
+
+/* RAFTING TRIP STYLES */
+.trip {
+  display: inline;
+  justify-content: space-between;
+  gap: 8rem;
+} 
+
+.trip figure {
+  width: 200px; 
+  margin: 10px;
+  justify-content: center;
+  gap: 1rem;
+} 
+
+.trip img {
+  width: 75%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+.trip #figure1,
+.trip #figure2,
+.trip #figure3 {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.trip figcaption {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--accent2-color); 
+  font-family: var(--body-font);
+}
+
+.trip-info {
+  padding: 1rem;
+}
+
+.trip-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.trip-table th, .trip-table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.cta-link {
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  text-decoration: underline;
+  border-radius: 4px;
+}
 
 /* Footer */
-/* footer {
+footer {
   background-color: var(--accent2-color);
   color: var(--accent1-color);
   display: flex;
@@ -326,17 +494,17 @@ form button:hover {
   align-items: center;
   padding: 20px 10px;
   margin-top: 30px;
-} */
+}
 
-footer {
+/* footer {
   background-color: var(--accent2-color);
   color: var(--accent1-color);
   width: 100%;
   padding: 20px 0;
   margin-top: 30px;
-}
+} */
 
-footer > div,
+/* footer > div,
 footer > nav,
 footer > p {
   width: 840px;
@@ -346,6 +514,14 @@ footer > p {
   align-items: center;
   flex-wrap: wrap;
   padding: 0 10px;
+} */
+
+footer .moqup a {
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  text-align: center;
+  margin: auto;
+  display: block;
 }
 
 footer p {
@@ -367,4 +543,3 @@ footer p {
 .socialmedia a img {
   width: 30px;
 }
-
