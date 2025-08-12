@@ -180,18 +180,6 @@ nav, p, section, article {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
-.adventure #figure1,
-.adventure #figure2,
-.adventure #figure3,
-.adventure #figure4,
-.adventure #figure5 {
-  display: block-direction;
-  margin: 0 1rem;
-  width: 200px;
-  /* position: absolute; */
-  
-}
-
 .adventure figcaption {
   margin-top: 6px;
   font-size: 0.85rem;
