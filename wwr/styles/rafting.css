@@ -185,7 +185,7 @@ nav, p, section, article {
 .adventure #figure3,
 .adventure #figure4,
 .adventure #figure5 {
-  display: flex;
+  display: block;
   margin: 0 1rem;
   width: 200px;
   /* position: absolute; */
